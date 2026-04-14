@@ -8,7 +8,51 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
+    <form action="/pets/orders" method="post">
+        <label for="petType" >Вид питомца
+            <select name="petType" id="petType" required>
+                <option value="dog" selected>dog</option>
+                <option value="cat">cat</option>
+                <option value="tiger" selected>tiger</option>
+            </select>
+        </label>
+        <label for="gender">Пол
+            <select id="gender" name="gender" required>
+                <option value="boy">boy</option>
+                <option value="girl">girl</option>
+                <option value="none" selected>none</option>
+            </select>
+        </label>
+        <label for="eyeColor">
+            Цвет глаз
+            <input type="color" id="eyeColor" name="eyeColor" required>
+        </label>
+        <label for="tailLength">
+            Длина хвоста
+            <input type="number" id="tailLength" name="tailLength" min="7" max="120" step="1" placeholder="10" required>
+        </label>
+        <label for="name">
+            Имя
+            <input type="text" id="name" name="name" minlength="3" maxlength="50" placeholder="Бобик" required>
+        </label>
+        <label for="dateOfBirth">
+            Дата рождения
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+        </label>
+        <label for="email">
+            Email
+            <input type="email" id="email" name="email" placeholder="aboba@aboba.aboba" required>
+        </label>
+        <label for="phone">
+            Телефон
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </label>
+        <label for="rules">
+            Правила
+            <input type="checkbox" id="rules" name="rules" value="true" required>true
+        </label>
+        <button type="submit">Отправить</button>
+    </form>
     <!--Форму размещай тут-->
 
 </main>
